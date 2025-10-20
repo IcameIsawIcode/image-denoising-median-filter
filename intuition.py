@@ -1,3 +1,12 @@
+'''
+This academic assignment acted as a motivation for me to extend it into a image filter. 
+'''
+
+
+
+
+
+
 # Function to calculate the median of a 3x3 grid centered at (i, j)
 def med(i, j, l, r, c):
    
@@ -38,3 +47,4 @@ for i in range(r):
             print(me)
         else:
             print(me, end=' ')
+
