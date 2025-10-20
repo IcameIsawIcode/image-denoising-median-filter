@@ -31,6 +31,7 @@ def main():
     # Load the image, here your image goes
     image_path = input("Enter path to the grayscale image: ").strip()
     image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+    noisy = image.copy()
 
     if image is None:
         print("Error: Could not load image.")
@@ -39,7 +40,6 @@ def main():
     # Applying the median filter
     denoised = median_filter(noisy, kernel_size=3)
     cv2.imshow("Original Image", image)
-    cv2.imshow("Noisy Image", noisy)
     cv2.imshow("Denoised Image (Median Filter)", denoised)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
